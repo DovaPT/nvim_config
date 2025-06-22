@@ -1,6 +1,6 @@
 return {
 	"nvim-treesitter/nvim-treesitter",
-	branch = "main",
+	branch = "master",
   lazy = false,
 	opts = {
 		ensure_installed = {'rust', 'lua', 'python', 'zig'},
