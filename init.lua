@@ -6,6 +6,7 @@ vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.cursorline = true
 
+vim.diagnostic.config({virtual_lines = true, virtual_text = true})
 require("config.lazy")
 
 vim.lsp.enable('rust-analyzer')
