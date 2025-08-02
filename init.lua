@@ -9,20 +9,13 @@ vim.opt.cursorline = true
 vim.diagnostic.config({virtual_lines = true, virtual_text = true})
 require("config.lazy")
 
-vim.lsp.enable('rust-analyzer')
-vim.lsp.config['rust-analyzer'] = {}
 
-vim.lsp.enable('luals')
-vim.lsp.config['luals'] = {}
 
-vim.lsp.enable('vscode-html-language-server')
-vim.lsp.config['vscode-html-language-server'] = {}
-
-vim.lsp.enable('vscode-css-language-server')
-vim.lsp.config['vscode-css-language-server'] = {}
-
-vim.lsp.enable('pyright-langserver')
-vim.lsp.config['pyright-langserver'] = {}
+local lsps = {"rust-analyzer", "lualls", "vscode-html-language-server", "vscode-css-language-server", "gopls", "pyright-langserver"}
+for _,lsp in ipairs(lsps) do
+  vim.lsp.enable(lsp)
+  vim.lsp.config[lsp] = {}
+end
 
 vim.lsp.inlay_hint.enable(true)
 vim.cmd.colorscheme("ayu-dark")
