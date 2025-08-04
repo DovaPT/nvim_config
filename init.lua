@@ -12,12 +12,16 @@ require("config.lazy")
 
 vim.lsp.enable({
   "rust-analyzer",
-  "lualls",
+  "lua_ls",
   "vscode-html-language-server",
   "vscode-css-language-server",
   "gopls",
-  "pyright-langserver"
 })
+vim.lsp.config['rust-analyzer'] = {}
+vim.lsp.config['vscode-html-language-server'] = {}
+vim.lsp.config['vscode-css-language-server'] = {}
+vim.lsp.config['gopls'] = {}
+
 vim.lsp.inlay_hint.enable(true)
 vim.cmd.colorscheme("ayu-dark")
 vim.api.nvim_set_hl(0, 'LineNr', { fg = 'grey', bold = true })
