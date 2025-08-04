@@ -24,4 +24,4 @@ vim.api.nvim_set_hl(0, 'LineNr', { fg = 'grey', bold = true })
 vim.api.nvim_set_hl(0, 'CursorLineNr', { fg = 'orange', bold = true })
 
 
-require("peter.keybinds")
+require("keybinds")
