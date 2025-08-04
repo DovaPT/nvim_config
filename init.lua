@@ -10,7 +10,8 @@ vim.diagnostic.config({ virtual_lines = true, virtual_text = true })
 
 require("config.lazy")
 
-vim.lsp.enable({ "rust-analyzer",
+vim.lsp.enable({
+  "rust-analyzer",
   "lualls",
   "vscode-html-language-server",
   "vscode-css-language-server",
