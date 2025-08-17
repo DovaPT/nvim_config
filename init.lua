@@ -11,13 +11,14 @@ vim.diagnostic.config({ virtual_lines = true, virtual_text = true })
 require("config.lazy")
 
 vim.lsp.enable({
-  "rust-analyzer",
+  "rust_analyzer",
   "lua_ls",
   "vscode-html-language-server",
   "vscode-css-language-server",
   "gopls",
 })
-vim.lsp.config['rust-analyzer'] = {}
+
+vim.lsp.config['rust_analyzer'] = {}
 vim.lsp.config['vscode-html-language-server'] = {}
 vim.lsp.config['vscode-css-language-server'] = {}
 vim.lsp.config['gopls'] = {}
