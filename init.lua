@@ -5,23 +5,25 @@ vim.o.expandtab = true
 vim.o.tabstop = 2
 vim.o.shiftwidth = 2
 vim.o.cursorline = true
+vim.o.clipboard = "unnamedplus"
 vim.o.signcolumn = "yes"
+vim.o.winborder = "single"
 vim.diagnostic.config({ virtual_lines = true, virtual_text = true })
 
-require("config.lazy")
 
-vim.lsp.enable({
+require("config.lazy")
+local lsps = {
   "rust_analyzer",
   "lua_ls",
-  "vscode-html-language-server",
-  "vscode-css-language-server",
+  "html",
+  "cssls",
   "gopls",
-})
+}
+vim.lsp.enable(lsps)
 
-vim.lsp.config['rust_analyzer'] = {}
-vim.lsp.config['vscode-html-language-server'] = {}
-vim.lsp.config['vscode-css-language-server'] = {}
-vim.lsp.config['gopls'] = {}
+for _,lsp in ipairs(lsps) do
+  vim.lsp.config[lsp] = {}
+end
 
 vim.lsp.inlay_hint.enable(true)
 vim.cmd.colorscheme("ayu-dark")
