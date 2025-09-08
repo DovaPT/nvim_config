@@ -10,7 +10,6 @@ vim.o.signcolumn = "yes"
 vim.o.winborder = "single"
 vim.diagnostic.config({ virtual_lines = true, virtual_text = true })
 
-
 require("config.lazy")
 local lsps = {
   "rust_analyzer",
