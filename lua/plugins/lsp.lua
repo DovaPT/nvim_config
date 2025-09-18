@@ -1,7 +1,7 @@
 return  {
   {
     "mason-org/mason-lspconfig.nvim",
-    opts = {},
+    opts = {ensure_installed = {}},
     dependencies = {
       { "mason-org/mason.nvim", opts = {} },
       "neovim/nvim-lspconfig",
@@ -22,7 +22,5 @@ return  {
     'windwp/nvim-autopairs',
     event = "InsertEnter",
     config = true
-    -- use opts = {} for passing setup options
-    -- this is equivalent to setup({}) function
   }
 }
