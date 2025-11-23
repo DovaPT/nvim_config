@@ -13,14 +13,23 @@ return {
         opts = {
             keymap = { preset = 'default' },
             appearance = { nerd_font_variant = 'normal' },
-        },
-        sources = {
-            default = { 'lsp', 'path', 'snippets', 'buffer' },
+            sources = {
+                default = { 'lsp', 'path', 'snippets', 'buffer' },
+            },
+            signature = { enabled = true },
+            completion = {
+                    keyword = { range = 'full' },
+                documentation = {
+                    auto_show = true,
+                    auto_show_delay_ms = 500,
+                }
+            }
         },
     },
     {
         'windwp/nvim-autopairs',
         event = "InsertEnter",
+        opts = {},
         config = true
     }
 }
